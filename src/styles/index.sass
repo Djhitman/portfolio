@@ -1,0 +1,235 @@
+// Bootstrap
+
+@import '~bootstrap/scss/bootstrap.scss'
+
+
+// Fonts
+
+@font-face 
+  font-family: 'Century Gothic'
+  src: url('../public/fonts/CenturyGothic.ttf')
+
+@font-face 
+  font-family: 'Century Gothic Bold'
+  src: url('../public/fonts/CenturyGothic-Bold.ttf')
+
+@font-face 
+  font-family: 'Geometria Light'
+  src: url('../public/fonts/GeometriaLight.otf')
+
+@font-face 
+  font-family: 'Geometria Bold'
+  src: url('../public/fonts/GeometriaBold.ttf')
+
+
+
+body, ul, li
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+  
+// Navbar
+.navbar
+  position: relative
+  font-family: "Geometria Bold"
+  transition: all 0.3s 0s ease
+  width: 50%
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px
+  border-radius: 15px
+  margin-top: 50px
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  transform: translateY(-180px)
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin-bottom: 5px
+    margin-top: 3px
+    &-item
+      font-size: 26px
+      list-style: none
+      position: relative
+      &-link
+        color: #000    
+      &::after
+        content: "/"
+        margin-left: 40px
+        margin-right: 40px
+      &:last-child::after
+        content: ''
+        margin-right: 0
+        margin-left: 0
+      &_active
+        &-main
+          color: grey
+        &-vue
+          color: #3fb27f
+        &-react
+          color: #43bede
+        &-html
+          color: #3756f5
+        &-about
+          color: #eb6e26
+
+// Main Card
+
+.main-avatar
+  border-radius: 50%
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 19px 33px
+  transition: all 0.3s 0s ease
+  width: 250px
+  height: 250px
+  overflow: hidden
+  cursor: pointer
+  margin-left: auto
+  margin-right: auto
+  margin-top: -60px
+  &:hover
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px
+.main-title 
+  margin-top: 20px
+  font-family: 'Century Gothic Bold', sans-serif
+.main-subtitle
+  margin-top: 20px
+  font-family: 'Geometria Light', sans-serif
+  letter-spacing: -0.03rem
+  
+
+
+
+// Social Links
+.social-links 
+  display: flex
+  justify-content: center
+  margin-top: 20px
+  &__link
+    transition: all 0.3s 0s ease
+    margin-right: 20px
+    border-radius: 50%
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 7px
+    &:hover
+      box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 18px
+    &-img
+      width: 40px
+
+
+
+
+
+// portfolio-card
+.portfolio-card
+  width: 90%
+  height: 280px
+  border-radius: 42px
+  text-align: center
+  display: flex
+  justify-content: center
+  flex-direction: column
+  color: #fff
+  margin-top: 30px
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px
+  transition: all 0.3s 0s ease
+  cursor: pointer
+  &:hover
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 19px
+  &__title
+    font-family: "Century Gothic Bold", sans-serif
+    font-size: 48px
+    margin-bottom: 0
+  &__subtitle
+    font-family: "Century Gothic", sans-serif
+    font-size: 21px
+    margin: 0
+  &__img
+    padding-bottom: 20px
+
+
+
+// Empty placeholder
+.empty-placeholder
+  display: flex
+  flex-direction: column
+  text-align: center
+  margin-top: 200px
+  &__title
+    font-size: 60px
+    font-family: "Geometria Bold", sans-serif
+    opacity: .10
+
+// Main footer
+.main-footer
+  &__button
+    margin-top: 10px
+    margin-bottom: 20px
+    border: none
+    padding: 10px 40px
+    border-radius: 12px
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px
+    transition: all 0.3s 0s ease
+    font-family: "Geometria Bold", sans-serif
+    &:hover
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 16px
+  &__button-left
+    margin-right: 20px
+    background: #8ed345
+    color: #fff
+  &__button-right
+    background: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////// Transitions
+
+// Redirect Transition
+.smooth-enter
+  opacity: 0
+  transform: scale(0.9)
+  transform: translateX(50px)
+.smooth-enter-active
+  opacity: 1
+  transform: translateX(0)
+  transition: opacity 300ms, transform 300ms
+.smooth-exit
+  opacity: 1
+
+.smooth-exit-active
+  opacity: 0
+  transform: scale(0.9)
+  transition: opacity 300ms, transform 300ms
+
+// Navbar Transition
+
+.navbar-transition-enter
+  transform: translateY(-130px)
+.navbar-transition-active
+  transform: translateY(20px)
+  transition: opacity 300ms, transform 300ms
+.navbar-transition-enter-done
+  transform: translateY(0px)
+.navbar-transition-exit
+  opacity: 1
+.navbar-transition-exit-active
+  transform: translateY(-130px)
+  opacity: 0
+  transition: opacity 300ms, transform 300ms
